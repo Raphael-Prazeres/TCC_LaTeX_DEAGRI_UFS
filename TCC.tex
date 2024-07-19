@@ -1,0 +1,104 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% abnTeX2: Modelo de Trabalho Acadêmico em conformidade com 
+% as normas da ABNT
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[english, 
+brazil, 
+bsc] %Opções bsc (TCC) e msc (Mestrado)
+{deagri-abntex2}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Área para adição de pacotes extras
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{multirow}
+\usepackage{verbatim}
+\usepackage{tablefootnote}
+\usepackage{graphicx}
+
+\usepackage{lipsum} %Retirar para a versão final do documento
+
+%Utilize aqui seu pacote preferido para algoritmos
+\usepackage[linesnumbered]{algorithm2e}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%Compila o indice
+\makeindex
+
+\begin{document}
+	
+	% Seleciona o idioma do documento (conforme pacotes do babel)
+	\selectlanguage{brazil}
+	
+	% Retira espaço extra obsoleto entre as frases.
+	\frenchspacing
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ELEMENTOS PRÉ-TEXTUAIS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pretextual
+
+\titulo{DIGITE AQUI O TÍTULO DO SEU TRABALHO} 
+\autor{Seu nome}
+\orientador{Nome do Orientador}
+%\coorientador{Nome do Coorientador}
+\curso{Engenharia Agrícola}
+
+\inserirInformacoesPDF
+
+\imprimircapa
+\imprimirfolhaderosto*
+
+\include{Pre_Textual/Dedicatoria}
+\include{Pre_Textual/Agradecimentos}
+\include{Pre_Textual/Epigrafe}
+\include{Pre_Textual/Resumo}
+\include{Pre_Textual/Abstract}
+
+
+\mostrarlistadeILUSTRACOES
+\mostrarlistadeQUADROS
+\mostrarlistadeTABELAS
+%\mostrarlistadeCODIGOS
+%\mostrarlistadeALGORITMOS
+
+\include{Pre_Textual/Abreviaturas}
+\include{Pre_Textual/Simbolos}
+
+\mostrarSUMARIO
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ELEMENTOS TEXTUAIS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\textual
+\include{Conteudo/01_Introducao}
+\include{Conteudo/02_Objetivos}
+\include{Conteudo/03_Material_e_Metodos}
+\include{Conteudo/04_Resultados_e_discussao}
+\include{Conteudo/05_Conclusoes}
+
+
+\phantompart
+\bibliography{Bibliografia}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ELEMENTOS PÓS-TEXTUAIS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\postextual
+
+\renewcommand{\chapnumfont}{\chaptitlefont}
+\renewcommand{\afterchapternum}{}
+\include{Pos_Textual/Apendices}
+\include{Pos_Textual/Anexos}
+
+\end{document}
+
+
+
+

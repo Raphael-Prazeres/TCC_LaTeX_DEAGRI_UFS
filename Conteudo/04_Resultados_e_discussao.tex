@@ -1,0 +1,131 @@
+\chapter{Resultados e discussão}
+
+Exemplo de como adicionar uma Tabela \ref{tab:val_medios}....
+
+
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+% \usepackage{graphicx}
+\begin{table}[h]
+	\centering
+	\caption{Título da tabela....}
+	\label{tab:val_medios}
+	\resizebox{\columnwidth}{!}{%
+		\begin{tabular}{lllcccc}
+			\hline
+			\multicolumn{1}{c}{\multirow{2}{*}{Dia}} &
+			\multicolumn{1}{c}{\multirow{2}{*}{Sensor}} &
+			\multicolumn{1}{c}{\multirow{2}{*}{N}} &
+			\multicolumn{2}{c}{Temperatura (°C)} &
+			\multicolumn{2}{c}{UR (\%)} \\
+			\multicolumn{1}{c}{} &
+			\multicolumn{1}{c}{} &
+			\multicolumn{1}{c}{} &
+			Média &
+			StDev &
+			Média &
+			StDev \\ \hline
+			27/11/2021 &
+			HTD &
+			42 &
+			- &
+			- &
+			6,13 a &
+			4,045 \\
+			&
+			Termo &
+			42 &
+			2,96 a &
+			0,4580 &
+			6,57 a &
+			4,462 \\
+			28/11/2021 &
+			HTD &
+			41 &
+			- &
+			- &
+			6,84 a &
+			2,196 \\
+			&
+			Termo &
+			4 &
+			2,61 a &
+			0,4018 &
+			6,44 a &
+			2,520 \\
+			29/11/2021 &
+			HTD &
+			22 &
+			- &
+			- &
+			5,41 a &
+			3,023 \\
+			&
+			Termo &
+			22 &
+			2,34 a &
+			0,4020 &
+			5,82 a &
+			3,002 \\
+			30/11/2021 &
+			HTD &
+			37 &
+			- &
+			- &
+			6,91 a &
+			2,955 \\
+			&
+			Termo &
+			37 &
+			2,40 a &
+			0,3018 &
+			6,76 a &
+			3,303 \\
+			01/12/2021 &
+			HTD &
+			29 &
+			- &
+			- &
+			6,72 a &
+			2,12 \\
+			&
+			Termo &
+			29 &
+			3,02 a &
+			0,3018 &
+			6,52 a &
+			2,60 \\
+			02/12/2021 &
+			HTD &
+			2 &
+			- &
+			- &
+			- &
+			- \\
+			&
+			Termo &
+			2 &
+			3,06 a &
+			0,4892 &
+			- &
+			- \\
+			03/12/2021 &
+			HTD &
+			2 &
+			- &
+			- &
+			- &
+			- \\
+			&
+			Termo &
+			2 &
+			3,08 a &
+			0,5330 &
+			- &
+			- \\ \hline
+			\multicolumn{7}{l}{\begin{tabular}[c]{@{}l@{}}Legenda da tabela.\end{tabular}}
+		\end{tabular}%
+	}
+\end{table}
+
+\lipsum[1-2].
